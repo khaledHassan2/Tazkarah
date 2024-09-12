@@ -1,0 +1,26 @@
+<div class="chart-container p-1">
+  <div class="row">
+    <div class="col-md-3">
+
+      <button class="btn btnChart"> <i class="fa-solid fa-chevron-down text-black-50"></i> سنويا </button>
+    </div>
+    <div class="col-md-9">
+
+      <div class="chart-header d-flex flex-column align-items-end">
+        <h2 class="">إحصائيات استخدام القسيمة</h2>
+        <div class="date-picker">
+          2023, يوليو - 2023, أغسطس
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <highcharts-chart
+    [Highcharts]="Highcharts"
+    [options]="chartOptions"
+    style="width: 100%; height: 220px; display: block;"> <!-- Fixed height -->
+  </highcharts-chart>
+</div>
+
+  
+

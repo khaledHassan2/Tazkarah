@@ -1,0 +1,147 @@
+<!-- <div class="bg-white p-1 rounded">
+
+    <p-table [value]="tickets" class="p-datatable-gridlines text-center rounded">
+        <ng-template pTemplate="header">
+          <tr class="bg-gray p-2">
+            <th>#</th>
+            <th> المستخدم </th>
+            <th> رقم التذكرة </th>
+            <th> قيمى التذكرة </th>
+            <th> عدد الأشخاص </th>
+            <th> عدد مرات الشراء </th>
+            <th> التذكرة </th>
+          </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-ticket let-rowIndex="rowIndex">
+          <tr>
+            <td>{{ rowIndex + 1 }}</td>
+            <td>
+              <div class="p-d-flex p-ai-center">
+                <img [src]="ticket.userAvatar" class="p-mr-2" width="30" height="30" alt="User Avatar"/>
+                <span class="m-2">{{ ticket.userName }}</span>
+              </div>
+            </td>
+            <td>{{ ticket.ticketNumber }}</td>
+            <td>{{ ticket.price }}</td>
+            <td>
+              <span pTooltip="{{ ticket.movieDetails }}" tooltipPosition="top">
+                {{ ticket.people }}
+              </span>
+            </td>
+            <td>{{ ticket.seats }}</td>
+            <td class="d-flex justify-content-center align-items-center gap-2">
+                <img src="./assets/imges/ticket-2.svg" alt="">
+               <div class="">
+                <span> {{ticket.movieDetails}} </span>
+                <span class="d-block small text-black-50"> 9mb . PDF </span>
+               </div>
+                <img src="./assets/imges/dowinlod.svg" alt="">
+            </td>
+          </tr>
+        </ng-template>
+      </p-table>
+      
+    
+</div> -->
+<!-- tfuygiuhjokpl -->
+
+    <div class="table-responsive p-2 bg-white rounded">
+        <table class="table text-center m-0">
+          <thead>
+            <tr>
+              <th scope="col" class="rounded-end bg-gray text-gray m-1">#</th>
+              <th scope="col" class="bg-gray text-gray"> المستخدم </th>
+              <th scope="col" class="bg-gray text-gray"> رقم التذكرة </th>
+              <th scope="col" class="bg-gray text-gray"> قيمة التذكرة <i class="fa-solid fa-arrow-right-arrow-left fa-rotate-90"></i></th>
+              <th scope="col" class="bg-gray text-gray"> السينمات</th>
+              <th scope="col" class="bg-gray text-gray"> عدد الأشخاص </th>
+              <th scope="col" class="bg-gray text-gray"> عدد مرات الشراء </th>
+              <th scope="col" class="rounded-start bg-gray text-gray"> التذكرة </th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Angular loop -->
+           @for (ticket of tickets; track $index) {
+            <tr>
+                <td>{{ $index + 1 }}</td>
+                <td>
+                  <div class="p-d-flex p-ai-center">
+                    <img [src]="ticket.userAvatar" class="p-mr-2" width="30" height="30" alt="User Avatar"/>
+                    <span class="m-2">{{ ticket.userName }}</span>
+                    <span class="m-2 text-black-50 small d-block">{{ ticket.number }}</span>
+                  </div>
+                </td>
+                <td>{{ ticket.ticketNumber }}</td>
+                <td>{{ ticket.price }}</td>
+                <td
+                    type="text" 
+                    pInputText 
+                    pTooltip="صيدناوي مول , برج العرب" 
+                    tooltipPosition="top" 
+                    placeholder="Top"
+                >{{ ticket.cinema }} </td>
+                <td>
+                  <span pTooltip="{{ ticket.movieDetails }}" tooltipPosition="top">
+                    {{ ticket.people }}
+                  </span>
+                </td>
+                <td>{{ ticket.seats }}</td>
+                <td class="d-flex justify-content-center align-items-center gap-2">
+                  <img src="./assets/imges/ticket-2.svg" alt="">
+                  <div>
+                    <span> {{ticket.movieDetails}} </span>
+                    <span class="d-block small text-black-50"> 9mb . PDF </span>
+                  </div>
+                  <img (click)="onDownlod()" src="./assets/imges/dowinlod.svg" alt="">
+                </td>
+              </tr>
+           }
+          </tbody>
+        </table>
+        <div class="d-flex justify-content-between align-items-center gap-2 p-0">
+
+            <div class="">
+                <span> عرض </span>
+                <div class="btn-group" role="group">
+                    <button type="button" class="btn dropdown-toggle border rounded" data-bs-toggle="dropdown" aria-expanded="false">
+                      20
+                    </button>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item">50</a></li>
+                      <li><a class="dropdown-item">100</a></li>
+                    </ul>
+                  </div>
+                  <span> من اصل 250 </span>
+            </div>
+
+            <div class="">
+                <div class="d-flex justify-content-center align-items-center pt-2">
+                    <nav aria-label="Page navigation">
+                      <ul class="pagination">
+                        <li class="page-item">
+                          <a class="page-link" aria-label="Previous">
+                            <span aria-hidden="false"><i class="fa-solid fa-angle-right"></i></span>
+                          </a>
+                        </li>
+                        <li class="page-item active" aria-current="page">
+                          <a class="page-link">1</a>
+                        </li>
+                        <li class="page-item"><a class="page-link">2</a></li>
+                        <li class="page-item"><a class="page-link">3</a></li>
+                        <li class="page-item"><a class="page-link">4</a></li>
+                        <li class="page-item"><a class="page-link">5</a></li>
+                        <li class="page-item">
+                          <a class="page-link" aria-label="Next">
+                            <span aria-hidden="false"><i class="fa-solid fa-angle-left"></i></span>
+                          </a>
+                        </li>
+                      </ul>
+                    </nav>
+                  </div>
+                  
+            </div>
+
+        </div>
+    
+      
+</div>

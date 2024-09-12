@@ -1,0 +1,118 @@
+
+body{
+    font-family: myFont;
+    background-color:#D8D8E5;
+}
+.pen{
+    color: #8A74F9;
+}
+.update{
+    border-radius: 4px;
+    border: 1px solid #E9EAEA;
+    background-color: #F9F9F9;
+}
+.numTeckit{
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+    background: #E7EAED;
+    
+
+}
+.arrow{
+    width: 12.912px;
+    height: 12.912px;
+}
+.teckit{
+    border-radius: 12.474px;
+    background-color: #8A74F9;
+    /* width: 408px; */
+}
+.copy{
+    color: #8A74F9;
+}
+.boll-left{
+    width: 40;
+    height: 40;
+    background-color: red;
+}
+/*  */
+.teckit::after{
+    content: '';
+    width: 30px;
+    height: 30px;
+    background-color:#D8D8E5;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: -15px;
+    border-radius: 50%;
+}
+.teckit::before{
+    content: '';
+    width: 30px;
+    height: 30px;
+    background-color:#D8D8E5;
+    display: block;
+    position: absolute;
+    top: 50%;
+    right:-15px;
+    border-radius: 50%;
+}
+.my-trash{
+    position: absolute;
+    top: 24px;
+    left: 24px;
+}
+.cr{
+    cursor: pointer;
+}
+.demo-chart {
+    height: 400px;
+  }
+/* Styles for wrapping the search box */
+
+
+
+/* Bootstrap 4 text input with search icon */
+
+.has-search .form-control {
+    padding-left: 2.375rem;
+}
+
+.has-search .form-control-feedback {
+    position: absolute;
+    z-index: 2;
+    display: block;
+    width: 2.375rem;
+    height: 2.375rem;
+    line-height: 2.375rem;
+    text-align: center;
+    pointer-events: none;
+    color: #aaa;
+   
+}
+.icons{
+    color: #8B8B8B;
+}
+.add-teckit{
+    border-radius: 6px;
+    background: #8A74F9;
+}
+/* .form-check-input{
+    background-color: #8A74F9;
+    
+} */
+.custom-switch:checked {
+    background-color: #8A74F9; /* Background color for the switch when checked */
+    border-color: #8A74F9;    /* Border color for the switch when checked */
+  }
+  
+  .custom-switch:focus {
+    box-shadow: 0 0 0 0.25rem rgba(138, 116, 249, 0.25); /* Shadow effect on focus */
+  }
+  
+  .custom-switch:checked:before {
+    background-color: #fff; /* Switch knob color */
+  }
+  

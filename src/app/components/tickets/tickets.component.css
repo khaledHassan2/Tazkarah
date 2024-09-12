@@ -1,0 +1,71 @@
+.p-d-flex {
+    display: flex;
+  }
+  
+  .p-ai-center {
+    align-items: center;
+  }
+  
+  .p-mr-2 {
+    margin-right: 0.5rem;
+  }
+  
+  .p-datatable-gridlines {
+    border-collapse: collapse;
+  }
+  
+  .p-datatable-gridlines td, .p-datatable-gridlines th {
+    border: 1px solid #ddd;
+  }
+  .bg-gray{
+    background-color: #E3E4E9;
+  }
+  .text-gray{
+    color: #ABAAB1;
+  }
+  /* Make table responsive with horizontal scrolling */
+.table-responsive {
+    overflow-x: auto;
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+  
+  /* Optional: to prevent horizontal scrollbars on small screens */
+  .table {
+    white-space: nowrap;
+  }
+  
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+/* Customize pagination styles */
+
+.pagination .page-item .page-link {
+    color: #6c757d;
+    border: none;
+    font-size:0.8rem;
+  }
+  
+  .pagination .page-item.active .page-link {
+    background-color: #7b5ed6;
+    border-radius: 0.3rem;
+    
+    color: white;
+    border: none;
+  }
+  
+  .pagination .page-item .page-link:hover {
+    color: #7b5ed6;
+  }
+  
+  .pagination .page-item:first-child .page-link,
+  .pagination .page-item:last-child .page-link {
+    color: #6c757d;
+  }
+  
+  .pagination .page-item:first-child .page-link:hover,
+  .pagination .page-item:last-child .page-link:hover {
+    color: #7b5ed6;
+  }
+    
